@@ -392,14 +392,5 @@ for(char c:myName){
 // cout<<"logined failed \n worng cendential\n";
 // }
 // cout<<"\nI am out\n";
-
-
-
-
-
-
-
-
-
 return 0;
 }
