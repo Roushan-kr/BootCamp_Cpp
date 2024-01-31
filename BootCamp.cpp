@@ -13,7 +13,8 @@ void nothing(){
 }
 
 char meChar(){
-    return ('R'+'o'); // I don't know about this 
+    return ('R'+'o'); // I don't know about this  
+    // this retun a asci value addition dueto which it not in rage so it may print some ambigenous value 
 }
 
 
@@ -278,7 +279,7 @@ int arr[]={10,11,12,13,14,15,16,17}; // do like this if size not given  // somti
 // }
 
 // Now with some inhencement over for loop
-// for range loop / for each loop
+// for range-based loop / for each loop
 // int *ptr;
 // for (int i:arr)
 // {

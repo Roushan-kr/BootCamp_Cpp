@@ -1,0 +1,16 @@
+https://github.com/yhirose/cpp-httplib  for http and https data handling 
+
+https://lame.sourceforge.io/download.php  for audio interaction
+
+https://github.com/artyom-beilis/cppcms  freamework for webD
+
+https://github.com/CrowCpp/Crow/tree/v1.0%2B5 best for making sockets web freamework
+
+https://docs.kore.io/4.2.0/install.html   litw weigt for web works
+
+https://www.webtoolkit.eu/wt/features  for desifning websites
+
+https://www.mongodb.com/docs/drivers/cxx/#installation  monogo cpp based drivers
+
+https://github.com/open-source-parsers/jsoncpp  cpp with json comp..
+

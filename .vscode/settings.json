@@ -1,10 +1,21 @@
 {
     "files.associations": {
+        "*.py": "python",
         "cstdio": "cpp",
         "iostream": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
         "algorithm": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "new": "cpp",
+        "random": "cpp",
+        "aoa.h": "c",
+        "log.h": "c",
+        "typeinfo": "cpp",
+        "ratio": "cpp",
+        "string": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp",
+        "memory": "cpp"
     }
 }
