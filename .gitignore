@@ -1,5 +1,5 @@
-.vscode/
-/.vscode/
+.vscode
 *.exe
 temp.cpp
 # /.gitignore
+temp2.cpp
