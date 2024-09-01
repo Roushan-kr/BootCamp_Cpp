@@ -8,6 +8,6 @@ int main()
     char sss ='a';
     string ss = move(s);
     cout << ss << " s: " << s << endl;
-    cout<<typeid(sss).name();
+    puts(typeid(ss).name()) ;
     return 0;
 }
