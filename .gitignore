@@ -3,3 +3,5 @@
 temp.cpp
 # /.gitignore
 temp2.cpp
+test.*
+test*.cpp

@@ -1,18 +1,18 @@
-// using hitish chaudhari lecture (refrence c++20)
+// using hitish chaudhary lecture (refrence c++20)
 // If C++ compiler able to sucessfuly run it it argubely a C++ program
-// The total count of reserved keywords is 95.
+// Theor are 95 keywords in cpp.
 
 #include <iostream>
 #include <string>
 #include <cstdio>    // crossPlatform support for c/cpp
-using namespace std; // To avoid name colision insteed of using scope resolution operator
+using namespace std; // To avoid name colision insted of using scope resolution operator
 
 void nothing()
 {
     puts("I do nothing while in screen\n");
 }
 
-// if the Assigned valriable is char then it return ┴ while if int then -63(typeCast it)
+// if the Assigned dataType is char then it return ┴ while if int then -63(typeCast it)
 char meChar()
 {
     return ('R' + 'o'); // internal convertion to asci for performaming operation
@@ -37,12 +37,22 @@ int main()
     ----------------- C++ version and features -----------------
     C++ --> 1998( 1st version)
     C++3 -->  value init
-    C++11 --> lambda, nullptr, Rvalue refrence
+    C++11 --> lambda, nullptr, Rvalue refrence(move(), && direct move rither then copy)
     C++14 --> generlized lambdas , variable template
     C++17 --> flod expressions
-    C++20 --> Ranges lib, Coroutines, modules
+    C++20 --> Ranges lib, Coroutines(similar to Go community), modules
     //NOTE: most of major update comes after interval of 3Y, next 2023
+    c++23 --> error handling improved similar to rust, more on refinment 
     */
+
+   /*
+   Rvalue refrence
+   std::string str2 = std::move(str1); // str2 is now "Hello", and str1 is in a valid but unspecified state.
+    // inWhich 
+    // 1.  lvalue has a memory address and can be assigned to
+    // 2. rvalue is a temporary result of the addition operation if called by value.
+
+   */
 
     // nothing();
     // char rj=meChar();
@@ -56,9 +66,11 @@ int main()
     */
 
     /*
-    cout <<" That\'s me \?  \b ";
+    // \b for removeing prev char(index)
+    cout <<" That\'s me \?  \b "; 
     cout <<"\n That\'s me ? \f(in old day's it use to feed a new paper by printer)";
-    cout<<"\nthis is me\t u \v r \r a";
+    // \r make it right char[] to leftmost one by replaing it upto chat[].len (charage return)
+    cout<<"\nthis is me\t u \v r \r a"; 
     cout<<"this is \a";
     */
 
@@ -94,7 +106,7 @@ int main()
     // int value=40;
     // int *ptr =&value;
     // cout<<"value of &ptr "<<&ptr<<endl;
-    // cout<<"value of ptr "<<ptr<<endl; //same
+    // cout<<"value of ptr "<<ptr<<endl; //same (return &value)
     // cout<<"value of &value "<<&value<<endl; //same
     // cout<<"value of *ptr "<<*ptr<<endl;
     // cout<<"value of value "<<value<<endl;
