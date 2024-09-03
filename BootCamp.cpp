@@ -420,7 +420,7 @@ int main()
     // }catch(int a){
 
     //     cout<<"Acess denied!! with error code "<<a<<endl;
-    // }catch(...){ // it handel all othrt execption
+    // }catch(...){ // it handel all other execption
     // cout<<"logined failed \n worng cendential\n";
     // }
     // cout<<"\nI am out\n";
