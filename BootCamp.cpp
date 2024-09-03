@@ -1,6 +1,6 @@
 // using hitish chaudhary lecture (refrence c++20)
 // If C++ compiler able to sucessfuly run it it argubely a C++ program
-// Theor are 95 keywords in cpp.
+// 95 keywords in cpp.
 
 #include <iostream>
 #include <string>
@@ -42,17 +42,17 @@ int main()
     C++17 --> flod expressions
     C++20 --> Ranges lib, Coroutines(similar to Go community), modules
     //NOTE: most of major update comes after interval of 3Y, next 2023
-    c++23 --> error handling improved similar to rust, more on refinment 
+    c++23 --> error handling improved similar to rust, more on refinment
     */
 
-   /*
-   Rvalue refrence
-   std::string str2 = std::move(str1); // str2 is now "Hello", and str1 is in a valid but unspecified state.
-    // inWhich 
-    // 1.  lvalue has a memory address and can be assigned to
-    // 2. rvalue is a temporary result of the addition operation if called by value.
+    /*
+    Rvalue refrence
+    std::string str2 = std::move(str1); // str2 is now "Hello", and str1 is in a valid but unspecified state.
+     // inWhich
+     // 1. lvalue has a memory address and can be assigned to
+     // 2. rvalue is a temporary result of the addition operation if called by value.
 
-   */
+    */
 
     // nothing();
     // char rj=meChar();
@@ -67,10 +67,10 @@ int main()
 
     /*
     // \b for removeing prev char(index)
-    cout <<" That\'s me \?  \b "; 
+    cout <<" That\'s me \?  \b ";
     cout <<"\n That\'s me ? \f(in old day's it use to feed a new paper by printer)";
-    // \r make it right char[] to leftmost one by replaing it upto chat[].len (charage return)
-    cout<<"\nthis is me\t u \v r \r a"; 
+    // \r make it right char[] to leftmost one by replaing it upto char[].len (charage return)
+    cout<<"\nthis is me\t u \v r \r a";
     cout<<"this is \a";
     */
 
@@ -85,6 +85,22 @@ int main()
         valueless                   void
 
         we use qualifier like const to add extra fetures
+    */
+    /*
+    ------------------- Some Qualifiers ---------------------
+         1. const: To declare a variable as constant, meaning its value cannot be changed after initialization.
+         2. volatile: Informs the compiler that a variable may change at any time, preventing certain optimizations that assume the variable cannot change unexpectedly (useful in multithreading or when interacting with hardware).
+         3. mutable: Allows a member of an object to be modified even if the object is declared as const.
+         4. static:{
+                        Within a class: Shared among all instances of the class.
+                        Within a function: Retains its value between function calls.
+                        At file scope: Limits visibility to the file (internal linkage).
+        }
+        5. extern: Declares a variable or function that is defined in another translation unit (file).
+        6. register:  Suggests to the compiler that the variable should be stored in a CPU register for faster access. Modern compilers often ignore this qualifier, as they handle optimization more efficiently.
+        7. constexpr: Declares that the value of a variable or the result of a function can be computed at compile time.
+        8. inline fn: Suggests that the compiler replace the function call with the function code to avoid function call overhead.
+        9. restrict: Indicates that a pointer is the only reference to that memory location, allowing the compiler to optimize more aggressively.
     */
 
     // string myColor;
@@ -109,15 +125,16 @@ int main()
     // cout<<"value of ptr "<<ptr<<endl; //same (return &value)
     // cout<<"value of &value "<<&value<<endl; //same
     // cout<<"value of *ptr "<<*ptr<<endl;
-    // cout<<"value of value "<<value<<endl;
+    // cout<<"value of double pointer "<<*(*(&ptr))<<endl; //NOTE: same
+    // cout<<"value of value "<<value<<endl; //same
 
-    // int MyVar=*ptr; // pointer derfrencing
+    // int MyVar=*ptr; // NOTE: pointer derfrencing
     // cout<<"\n value of MyVar is "<<MyVar<<endl;
 
     /*
     // now About some refrence data type
     int score=40;
-    int &anotherRefrece=score;
+    int &anotherRefrece=score; //pointing to same mem addresh
     cout<<"\n"<<score;
     cout<<"\n"<<anotherRefrece;
     cout<<"\n"<<&anotherRefrece; //same
@@ -132,7 +149,7 @@ int main()
     */
     /*
     // array
-    // int intArray[4]={1,2,3,NULL};  // c**a likin kam keya
+    // int intArray[4]={1,2,3,NULL};  // c**a likin kam keya ab c**d bhe kam bhe nhu keya
     int intArray[4]={1,2,3,};
     cout<<intArray<<endl; // they are just the addresh then i may use similar pointer arthemitices also addresh are assinable
     cout<<*intArray<<endl; // like this
