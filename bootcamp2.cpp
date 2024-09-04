@@ -2,8 +2,13 @@
 #include <string>
 // https://stackoverflow.com/questions/4172722/what-is-the-rule-of-three  refer this 
 using namespace std;
-// # any this use to write like this is forst got stored in memory with first pr=rority to read and executr
-//  also after namin it all other is treated as rest of code snipeat
+// #foo (like #define), this use in which first got stored in memory with first property get readed and executed 
+//  also after naming it all other is treated as rest of code snipeat
+
+// directive for defining macros
+// A macro is essentially a code snippet that gets replaced by its definition at compile time.
+// This is done by the preprocessor before the actual compilation of the code begins.
+
 #define ENDMSG cout<<"\nGood night buddy\n"  // general sentex
 // #define int int64_t
 #define print(a) cout<<a<<endl
@@ -51,14 +56,21 @@ class User{
 //   for disabling const and some func
     // User(){}
     // ~User(){}
+//Here, int8_t _secret is declared as a mutable member. This means that _secret can be changed even when the User object is declared as const.
 
 public:
     string name ="default";
     // class methods
+
     void classmsg(){cout<<"class is great "<<name<<endl;}
-    // int getsec() const {return _secret;} //A const class obj try to run const finction or data member
+    // int getsec() const {return _secret;} //A const class obj try to run const function or data member
+    // A const member function guarantees that it will not modify any member variables of the class (unless they are marked mutable).
+    // The const member function can be called on const objects of the class, meaning you can use this function even when the object is declared as const.
     int getsec() const ;//A const class obj try to run const function or data member
+
     void setSec( const int& a){_secret=a;}  // by using const i am able to directly assign value to it
+    // The const int& means that the function setSec takes an immutable reference to an integer. You cannot modify the value of a inside the function.
+
     void sayname();
 
 };
@@ -74,9 +86,9 @@ class Phone{
 public:
     Phone();
     Phone(const string &name ,const string &os, const float &price);
-    Phone(const Phone &);
+    Phone(const Phone &); //copy constructor
     string getname(){return _os;}
-    Phone &operator=(const Phone &);
+    Phone &operator=(const Phone &); // assignment opertor overloading 
     // ~Phone(){puts("Now let me Distory");}
     ~Phone(); //LIFO
 
@@ -130,7 +142,7 @@ int main(){
     float c=14.5,d=15.515;
     cout<<addme(a,b)<<endl;
     cout<<addme(c,d)<<endl;
-    cout<<addme(bool(c),(bool)d);  // i cant use use this if i had use call by refence
+    cout<<addme(bool(c),(bool)d);  // i can't use this if i had use call by refence
     char aa='a',bb ='b';
     string aaa="asdf", bbb="jkl;";
     cout<<addme(aa, bb);
@@ -141,6 +153,7 @@ int main(){
 //  quite important 
 
 // pointer to function template
+   //ref:  using fun_ptr = T (*)(T, T);
     // fun_ptr<float> ptr =&addme <>;  // both work
     fun_ptr<float> (ptr) =&addme ;
     cout<<ptr(15.64,-56.5544 );
@@ -155,7 +168,7 @@ int main(){
 */  
     // be caucious while using null
 
-    // print_val(NULL);  //i cant use this  for usinf this # define NULL 0 (mean redefined micro)
+    // print_val(NULL);  //i cant use this, for using this # define NULL 0 (mean redefined micro)
     // alternative
     // print_val(nullptr);// real null mean start of the value
 
@@ -176,12 +189,12 @@ int main(){
     sahil.classmsg();
     const User ak;
     cout<<ak.getsec();  // non const obj can acess const methods but conat object only acess const methods
-    User mkghadi =sahil;  // here a implicate cnst is called 
+    User mkghadi =sahil;  // here a implecite constructor called 
     mkghadi.classmsg();
     mkghadi.sayname();
     cout<<"\n";
 
-// while using a class a inplicite cnst is auto called 
+// while declearing a obj inst default const. called
     Phone sumsung;
     cout<<sumsung.getname()<<endl;
     Phone lenovo("lenovo k10 v1.x","Andro pi",12500);
@@ -192,7 +205,7 @@ int main(){
     Nokie.getname();
     // Phone rj1=(Nokie);
     cout <<"test val"<<endl;
-    Phone rj1=Nokie=motoG10; // first time blai mai orignal run hoga then overloaded
+    Phone rj1=Nokie=motoG10; // first time blai(nokie) mai orignal run hoga then overloaded
     cout<< rj1.getname();
    
 
