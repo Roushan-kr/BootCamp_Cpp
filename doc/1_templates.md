@@ -98,6 +98,65 @@ const User ak;
 cout << ak.getsec();  // Access const methods on a const object
 ```
 
+```cpp
+// comprensive eg
+class Phone{
+    string  _name ="X";
+    string _os ="";
+    float _price=0 ;
+public:
+    Phone();
+    Phone(const string &name ,const string &os, const float &price);
+    Phone(const Phone &); //copy constructor
+    string getname(){return _os;}
+    Phone &operator=(const Phone &); // assignment opertor overloading 
+    // ~Phone(){puts("Now let me Distory");}
+    ~Phone(); //LIFO
+
+};
+ Phone::Phone():_os("Andy"){puts("defaul cnst called ");} 
+//  Phone::Phone(): _os(),_name(),_price()      
+//  {puts("defaul cnst called ");}  // both work same 
+Phone::Phone(const string &name ,const string &os, const float &price):_os(os),_name(name),_price(price){puts("look like perimeter cnst");}
+
+Phone::Phone(const Phone &that){
+    puts("\ncopy cnst called");
+    _os="skinned-"+that._os;
+    _name=that._name;
+    _price=that._price;
+
+}
+
+Phone &Phone::operator=(Phone const &that){  // i think it may not so good
+    // if (this!=&that){
+        // puts("Are you board!!\n");
+        // this->_os="Alpha"+that._os;
+        _os="Alpha"+that._os;
+        // this->_name=that._name;
+        _name=that._name;
+        // this->_price=that._price;
+        _price=that._price;
+
+    // }
+
+    // Phone x;
+    //     x._os="rj-"+that._os;
+    //     x._name=that._name;
+    //     x._price=that._price;
+    // return x;
+
+}
+
+Phone::~Phone(){
+    puts("Let me Go now!!");
+    // for displaying name for c specific thing
+    printf(" for %s\n \t %p\n",_name.c_str(), this);  // this is a self refrencing pointer
+}
+
+
+
+```
+
 ## Summary
 
 - **Macros** simplify repetitive code snippets.
