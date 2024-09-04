@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-// I cpp Communities it were said that spent enough of your time for base class
+// In cpp Communities it were said that spent enough of your time for base class
 // Polimorphism (Things are of same type with multi instance)
 
 class Rectangle
