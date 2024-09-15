@@ -72,5 +72,6 @@
         "typeindex": "cpp",
         "valarray": "cpp",
         "string_view": "cpp"
-    }
+    },
+    "C_Cpp.intelliSenseEngineFallback": "disabled"
 }
